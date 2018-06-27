@@ -9,7 +9,3 @@ authorized_grant_types = VALUES(`authorized_grant_types`),
 access_token_validity = VALUES(`access_token_validity`),
 additional_information = VALUES(`additional_information`);
 
-INSERT INTO `oauth_example`.`account` (`id`, `password`, `username`) VALUES ('1', 'teste', 'teste')
-ON DUPLICATE key UPDATE
-password = VALUES(`password`),
-username = VALUES(`username`);

@@ -62,3 +62,4 @@ create table if not exists ClientDetails (
   additionalInformation VARCHAR(4096),
   autoApproveScopes VARCHAR(255)
 );
+

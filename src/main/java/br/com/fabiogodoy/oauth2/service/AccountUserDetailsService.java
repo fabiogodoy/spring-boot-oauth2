@@ -24,7 +24,7 @@ public class AccountUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         return accountRepository
                 .findByUsername(username)
-                .map(user -> new User(user.getUsername(), user.getPassword(), AuthorityUtils.createAuthorityList("ROLE_USER")))
+                .map(user -> new User(user.getName(), user.getPassword(), AuthorityUtils.createAuthorityList("ROLE_USER")))
                 .orElseThrow(() -> new UsernameNotFoundException("Could not find " + username));
     }
 }
