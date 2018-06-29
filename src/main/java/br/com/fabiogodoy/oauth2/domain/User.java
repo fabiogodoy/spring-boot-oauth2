@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Transient;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class User {
@@ -12,13 +13,16 @@ public class User {
     
     private Long id;
 
+    @NotNull
     private String name;
 
+    @NotNull
     private String password;
     
+    @NotNull
     private String username;
     
-    private String confimation;
+    private String confirmation;
 
     public User() {
     }
@@ -51,29 +55,25 @@ public class User {
 	}
 
     @Transient
-	public String getConfimation() {
-		return confimation;
+	public String getConfirmation() {
+		return confirmation;
 	}
 
 	public void setUsername(String email) {
 		this.username = email;
 	}
 
-	public void setConfimation(String confimation) {
-		this.confimation = confimation;
+	public void setConfirmation(String confimation) {
+		this.confirmation = confimation;
 	}
 
 	public void setId(Long id) {
         this.id = id;
     }
 
-    
-
     public void setName(String username) {
         this.name = username;
     }
-
-    
 
     public void setPassword(String password) {
         this.password = password;
