@@ -23,7 +23,7 @@ public abstract class AbstractService {
 	}
 
 	public String getMessage(String code, String... args) {
-		return accessor.getMessage(code);
+		return accessor.getMessage(code, args);
 	}
 
 	@Bean
