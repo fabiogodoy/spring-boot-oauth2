@@ -1,7 +1,5 @@
 package br.com.fabiogodoy.oauth2.resource;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,7 +20,7 @@ public class UserResource {
 	
 	@PostMapping
 	@RequestMapping(path="/")
-	public ResponseEntity<Response> register(@RequestBody @Valid User user) {
+	public ResponseEntity<Response> register(@RequestBody User user) {
 		
 		return ResponseEntity.ok(this.service.register(user));
 		
